@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Memorize</title>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="restart-button" id="restart">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" fill="currentColor" class="bi bi-speedometer"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z" />
+                <path fill-rule="evenodd"
+                    d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0" />
+            </svg>
+        </div>
+        <div id="timer">
+            <span id="hours">00:</span>
+            <span id="mins">00:</span>
+            <span id="seconds">00</span>
+        </div>
+        <div id="pause">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" fill="currentColor" class="bi bi-pause-circle-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5" />
+            </svg>
+        </div>
+    </div>
+    <div class="main-container">
+    </div>
+
+    <div class="game-start">
+        <div class="game-start-content">
+            <h2>Choose your level</h2>
+            <button id="easy">EASY</button>
+            <button id="medium">MEDIUM</button>
+            <button id="hard">HARD</button>
+            <button id="extreme">EXTREME</button>
+        </div>
+    </div>
+
+    <div class="continue-game">
+        <div class="restart-button" id="cRestart">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100" fill="currentColor" class="bi bi-speedometer"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z" />
+                <path fill-rule="evenodd"
+                    d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0" />
+            </svg>
+            <span>RESTART</span>
+        </div>
+        <div id="continue">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100" fill="currentColor" class="bi bi-play-circle-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+            </svg>
+            <span>CONTINUE</span>
+        </div>
+    </div>
+    <div class="finished-game-container">
+        <div class="finished-game">
+            <div id="trophy">🏆</div>
+            <p>Selamat! Anda menyelesaikan permainan level <span id="level">LEVEL</span> dalam waktu <br> <span
+                    id="time-spent">00: 00: 00</span></p>
+            <div class="restart-button" id="cRestart">
+                <svg xmlns="http://www.w3.org/2000/svg" height="100" fill="currentColor" class="bi bi-speedometer"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z" />
+                    <path fill-rule="evenodd"
+                        d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0" />
+                </svg>
+                <span>RESTART</span>
+            </div>
+        </div>
+    </div>
+    <audio id="win-sfx" src="./winSFX.mp3"></audio>
+    <script src="./script.js"></script>
+</body>
+
+</html>
